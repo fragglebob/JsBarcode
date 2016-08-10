@@ -43,7 +43,7 @@ function getRenderProperties(element) {
 				return newCanvasRenderProperties(element);
 			}
 			// If SVG
-			else if (typeof SVGElement !== 'undefined' && element instanceof SVGElement) {
+			else if (typeof SVGElement !== 'undefined' && element.nodeName == 'svg') {
 					return {
 						element: element,
 						options: (0, _getOptionsFromElement2.default)(element),
